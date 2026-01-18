@@ -1,0 +1,65 @@
+:root {
+    --color-main-red: #E50000;
+    --color-main-hover-red: #bf0303;
+    --color-page: #1E1E1E;
+    --color-text: #FFFFFF;
+    --color-paragraph: #999999;
+    --color-text-navbar:#BFBFBF;
+
+    --background-card-black: rgb(37, 37, 37);
+    --background-btn-card: #141414;
+    --background-btn-black: #0F0F0F;
+
+    --radius-btn:8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile phone */
+/* @media (max-width: 575px) {
+    h1 { font-size: 24-28px; }
+    h2 { font-size: 20-24px; }
+    h3 { font-size: 18-20px; }
+
+    p  { font-size: 14px; }
+    a, button, span { font-size: 14px; }
+} */
+
+/* large mobile phone */
+/* @media (min-width: 576px) and (max-width: 767px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 20px; }
+
+    p  { font-size: 16px; }
+    a, button, span { font-size: 16px; }
+} */
+
+/* tablet */
+/* @media (min-width: 768px) and (max-width: 991px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 22px; }
+
+    p  { font-size: 16px; }
+    a, button, span { font-size: 16px; }
+} */

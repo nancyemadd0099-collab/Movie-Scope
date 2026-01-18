@@ -1,0 +1,80 @@
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.logo p {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.logo-letter {
+    color: var(--color-main-red);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px;
+    background-color: var(--background-btn-black);
+    border-radius: var(--radius-btn);
+    border: 2px solid var(--background-card-black);
+}
+
+.nav-links a {
+    background-color: transparent;
+    font-size: 16px;
+    padding: 12px;
+    color: var(--color-text-navbar);
+    border-radius: var(--radius-btn);
+    transition: background-color 0.35s ease-in-out,
+        color 0.35s ease-in-out;
+    ;
+}
+
+.nav-links a:hover {
+    background-color: var(--background-card-black);
+    color: var(--color-text);
+}
+
+.nav-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-actions p{
+    font-size: 20px;
+    color: var(--color-text);
+    transition: color 0.35s ease-in-out;
+    padding: 14px 18px;
+}
+
+.nav-actions p:hover{
+    color: var(--color-main-hover-red);
+}
+.nav-actions button{
+    color: var(--color-text);
+    background-color: var(--color-main-red);
+    border: none;
+    border-radius: var(--radius-btn);
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.nav-actions button:hover{
+    background-color: var(--color-main-hover-red);
+}

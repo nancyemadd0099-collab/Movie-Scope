@@ -1,0 +1,66 @@
+#hero-section {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 1)),
+        linear-gradient(to right,
+            rgba(0, 0, 0, .47),
+            rgba(0, 0, 0, 0)),
+        url('/public/background-strangerthings3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.content-hero {
+    color: aliceblue;
+    animation: slideFromLeft 1s ease-out forwards;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    gap: 18px;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+}
+
+.content-hero h1 {
+    font-size: 58px;
+    color: var(--color-text);
+}
+
+.content-hero p {
+    color: var(--color-paragraph);
+}
+
+.content-hero button {
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: var(--radius-btn);
+    border: none;
+    background-color: var(--color-main-red);
+    color: var(--color-text);
+    align-self: flex-start;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.content-hero button:hover{
+    background-color: var(--color-main-hover-red);
+}
+
+.content-hero button i{
+    margin-right: 6px;
+}
