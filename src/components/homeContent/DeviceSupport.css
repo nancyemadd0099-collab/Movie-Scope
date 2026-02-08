@@ -1,0 +1,51 @@
+.device-support {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.device-support-header p:nth-of-type(1) {
+    font-size: 28px;
+    color: var(--color-text);
+}
+
+.device-support-header p:nth-of-type(2) {
+    font-size: var(--normal-font-size);
+    color: var(--color-paragraph);
+}
+
+.device-support-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.device-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid var(--border-card-black);
+    padding: 40px;
+    border-radius: var(--radius-btn);
+    background:
+        radial-gradient(circle at top right, #e5000021, transparent 35%),
+        linear-gradient(to right, #0F0F0F 100%);
+}
+
+.device-card p:nth-of-type(1) {
+    font-size: 20px;
+    color: var(--color-text);
+}
+
+.device-card p:nth-of-type(1) i {
+    color: var(--color-main-red);
+    background-color: var(--background-card-black);
+    padding: 12px;
+    border-radius: var(--radius-btn);
+    margin-right: 10px;
+}
+
+.device-card p:nth-of-type(2) {
+    font-size: var(--normal-font-size);
+    color: var(--color-paragraph);
+}

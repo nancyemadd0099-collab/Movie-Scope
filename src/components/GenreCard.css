@@ -6,6 +6,7 @@
     background-color: var(--background-card-black);
     padding: 24px;
     transition: 0.3s ease;
+    border: 2px solid var(--border-card-black);
 }
 
 .genre-card:hover {
