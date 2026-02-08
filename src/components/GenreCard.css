@@ -1,0 +1,64 @@
+.genre-card {
+    border-radius: var(--radius-btn);
+    overflow: hidden;
+    cursor: pointer;
+    color: var(--color-text);
+    background-color: var(--background-card-black);
+    padding: 24px;
+    transition: 0.3s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-6px);
+}
+
+.genre-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 120px;
+    gap: 6px;
+    position: relative;
+}
+
+.genre-images::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top,
+            rgb(31, 31, 31),
+            rgba(31, 31, 31, 0.703),
+            rgba(0, 0, 0, 0.2),
+            transparent);
+    pointer-events: none;
+}
+
+.genre-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-btn);
+}
+
+.genre-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: var(--normal-font-size);
+    padding-top: 10px ;
+}
+
+.genre-footer span:nth-last-of-type(1) {
+    font-size: 18px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.genre-footer span:nth-last-of-type(1):hover {
+    transform: translateX(5px);
+    opacity: 1;
+    color: var(--color-main-hover-red);
+}
