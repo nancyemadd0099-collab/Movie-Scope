@@ -1,6 +1,7 @@
 import './Home.css'
 import GenreCard from './GenreCard'
 import DeviceSupport from './homeContent/DeviceSupport';
+import Questions from './homeContent/Questions';
 
 function Home() {
 
@@ -23,6 +24,10 @@ function Home() {
 
                 <div className="device-support-section">
                     <DeviceSupport />
+                </div>
+
+                <div className="questions-section">
+                    <Questions />
                 </div>
             </section>
         </>

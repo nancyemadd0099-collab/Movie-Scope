@@ -52,13 +52,15 @@
     padding-top: 10px ;
 }
 
-.genre-footer span:nth-last-of-type(1) {
+.genre-footer span:nth-last-of-type(1) i{
     font-size: 18px;
     opacity: 0.7;
-    transition: 0.3s;
+    transition: transform 0.35s ease, 
+                opacity 0.35s ease, 
+                color 0.35s ease;
 }
 
-.genre-footer span:nth-last-of-type(1):hover {
+.genre-card:hover .genre-footer span i{
     transform: translateX(5px);
     opacity: 1;
     color: var(--color-main-hover-red);
