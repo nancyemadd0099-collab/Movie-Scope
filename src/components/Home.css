@@ -1,6 +1,5 @@
 .Home-section {
     background-color: var(--color-page);
-    height: 300vh;
     padding: 100px var(--padding-desktop);
     display: flex;
     flex-direction: column;

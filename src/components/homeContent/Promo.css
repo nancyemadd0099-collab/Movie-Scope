@@ -1,0 +1,42 @@
+.promo {
+    background: linear-gradient(to right,
+            #0a0a0a 2%,
+            #140f0ff3 20%,
+            #220e0ef4 45%,
+            #e500003f 100%),
+        url('/Container.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius-btn);
+    border: 2px solid var(--border-card-black);
+}
+
+.content-promo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-promo p:nth-of-type(1){
+    font-size: 28px;
+    color: var(--color-text);
+}
+
+.content-promo p:nth-of-type(2){
+    font-size: var(--normal-font-size);
+    color: var(--color-paragraph);
+}
+
+.btn-promo button{
+    padding: 14px 20px;
+    color: var(--color-text);
+    background-color: var(--color-main-red);
+    border-radius: var(--radius-btn);
+    font-size: 14px;
+    border: none;
+}

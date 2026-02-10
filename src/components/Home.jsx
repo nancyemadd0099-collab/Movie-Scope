@@ -2,6 +2,7 @@ import './Home.css'
 import GenreCard from './GenreCard'
 import DeviceSupport from './homeContent/DeviceSupport';
 import Questions from './homeContent/Questions';
+import Promo from './homeContent/Promo';
 
 function Home() {
 
@@ -28,6 +29,10 @@ function Home() {
 
                 <div className="questions-section">
                     <Questions />
+                </div>
+
+                <div className="promo-section">
+                    <Promo />
                 </div>
             </section>
         </>
