@@ -1,4 +1,4 @@
-.Home-section {
+#home-section {
     background-color: var(--color-page);
     padding: 100px var(--padding-desktop);
     display: flex;

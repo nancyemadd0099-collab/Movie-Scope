@@ -37,6 +37,11 @@
     color: var(--color-text);
     background-color: var(--color-main-red);
     border-radius: var(--radius-btn);
-    font-size: 14px;
+    font-size:  var(--normal-font-size);
     border: none;
+    transition: background-color 0.35s ease-in-out
+}
+
+.btn-promo button:hover{
+    background-color: var(--color-main-hover-red);
 }

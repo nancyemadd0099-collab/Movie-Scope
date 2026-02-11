@@ -8,7 +8,7 @@ function Home() {
 
     return (
         <>
-            <section className='Home-section'>
+            <section id='home-section'>
                 <div className="categories-section">
                     <div className="categories-header">
                         <p>Explore our wide variety of categories</p>

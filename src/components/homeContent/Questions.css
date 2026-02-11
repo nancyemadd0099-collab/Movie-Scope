@@ -59,7 +59,7 @@ font-size: 28px;
 }
 
 .ques-num {
-    background: var(--background-btn-number);
+    background: var(--background-card-black);
     padding: 16px;
     border-radius: var(--radius-btn);
     font-size: var(--normal-font-size);
