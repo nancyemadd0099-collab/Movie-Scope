@@ -24,7 +24,7 @@ function Navbar() {
     return (
         <>
             <nav className='navbar-section'>
-                <div className="container">
+                <div className='navbar-group'>
                     <div className="logo">
                         <p><span className="logo-letter">M</span>ovieScope</p>
                     </div>

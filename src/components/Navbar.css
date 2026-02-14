@@ -12,11 +12,11 @@
     border-radius: 0 0 30px 30px;
 }
 
-nav .container {
+.navbar-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
+    padding: 14px var(--padding-desktop);
 }
 
 .logo p {

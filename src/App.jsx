@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Home from './components/Home'
+import HeroMovie from './components/moviePage/HeroMovie'
 import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
 
@@ -12,7 +13,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<><Hero/> <Home /></> } />
+        <Route path='/' element={<><Hero /> <Home /></> } />
+        <Route path='/movies' element={<><HeroMovie /></> } />
       </Routes>
       <Footer/>
     </>
