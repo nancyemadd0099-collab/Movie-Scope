@@ -133,7 +133,6 @@
 /* ----------- Responsive ----------- */
 
 /* Large Mobile */
-/* @media (min-width: 576px) and (max-width: 767px) { */
 @media (max-width: 767px) {
     .nav-links {
         position: absolute;
@@ -188,15 +187,3 @@
         order: 2;
     }
 }
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 991px) {}
-
-/* Laptop */
-@media (min-width: 992px) and (max-width: 1365px) {}
-
-/* Desktop */
-@media (min-width: 1366px) and (max-width: 1599px) {}
-
-/* Large Screens */
-@media (min-width: 1600px) {}

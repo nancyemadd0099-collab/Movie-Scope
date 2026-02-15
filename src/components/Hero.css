@@ -17,7 +17,7 @@
 }
 
 .content-hero {
-    color: aliceblue;
+    color: var(--color-text);
     animation: slideFromLeft 1s ease-out forwards;
     display: flex;
     justify-content: flex-start;
@@ -45,10 +45,11 @@
 
 .content-hero p {
     color: var(--color-paragraph);
+    font-size: var(--normal-font-size);
 }
 
 .content-hero button {
-    font-size: var(--normal-fontSize);
+    font-size: var(--normal-font-size);
     padding: 14px 20px;
     border-radius: var(--radius-btn);
     border: none;
@@ -58,10 +59,72 @@
     transition: background-color 0.35s ease-in-out;
 }
 
-.content-hero button:hover{
+.content-hero button:hover {
     background-color: var(--color-main-hover-red);
 }
 
-.content-hero button i{
+.content-hero button i {
     margin-right: 6px;
+}
+
+
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+    #hero-section {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 1)),
+            linear-gradient(to right,
+                rgba(0, 0, 0, .35),
+                rgba(0, 0, 0, 0)),
+            url('/background-strangerthings3-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 var(--padding-mobile);
+    }
+
+    .content-hero {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 18px;
+        text-align: center;
+    }
+
+    @keyframes slideFromLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(-10px);
+            opacity: 1;
+        }
+    }
+
+    .content-hero h1 {
+        font-size: 32px;
+    }
+
+    .content-hero p {
+        font-size: var(--mobile-font-size);
+        color: var(--color-text-navbar);
+    }
+
+    .content-hero button {
+        font-size: var(--mobile-font-size);
+        padding: 14px 24px;
+        align-self: center;
+    }
+
 }
