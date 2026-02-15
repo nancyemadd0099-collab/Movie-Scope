@@ -1,47 +1,47 @@
-#footer{
+#footer {
     padding: 0px var(--padding-desktop);
     background-color: var(--background-btn-black);
 }
 
-.footer-container{
+.footer-container {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     padding: 80px 0;
 }
 
-.footer-col h4{
+.footer-col h4 {
     font-size: 18px;
     color: var(--color-text);
     margin-bottom: 14px;
 }
 
-.footer-col ul{
+.footer-col ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.footer-col li{
+.footer-col li {
     margin-bottom: 10px;
 }
 
-.footer-col li a{
+.footer-col li a {
     color: var(--color-paragraph);
     font-size: var(--normal-font-size);
     font-weight: 600;
     transition: color 0.35s ease-in-out
 }
 
-.footer-col li a:hover{
+.footer-col li a:hover {
     color: var(--color-text-navbar);
 }
 
-.social ul{
+.social ul {
     display: flex;
     gap: 10px;
 }
 
-.social li i{
+.social li i {
     color: var(--color-text);
     padding: 12px;
     font-size: 18px;
@@ -50,35 +50,81 @@
     transition: background-color 0.35s ease-in-out
 }
 
-.social li i:hover{
+.social li i:hover {
     background-color: var(--background-card-black-hover);
 }
 
-.footer-divider{
+.footer-divider {
     height: 1px;
     background-color: var(--background-card-black);
-    margin-bottom:25px;
+    margin-bottom: 25px;
 }
 
-.footer-bottom{
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 40px;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     color: var(--color-paragraph);
     font-size: var(--normal-font-size);
     display: flex;
     align-items: center;
 }
 
-.footer-bottom p span{
+.footer-bottom p span {
     margin: 0 10px;
     height: 18px;
     width: 1px;
     background-color: var(--color-paragraph);
     display: inline-block;
-    opacity: 0.6;  
+    opacity: 0.6;
+}
+
+
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+    #footer {
+        padding: 0px var(--padding-mobile);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 0;
+        gap: 30px;
+    }
+
+    .footer-col h4 {
+        font-size: var(--normal-font-size);
+        margin-bottom: 16px;
+    }
+
+    .footer-col li a {
+        font-size: var(--mobile-font-size);
+    }
+
+    .footer-divider {
+        height: 1px;
+        background-color: var(--background-card-black);
+        margin-bottom: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: start;
+        padding-bottom: 20px;
+        gap: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: var(--mobile-font-size);
+    }
+
+    .footer-bottom p span {
+        margin: 0 16px;
+    }
 }
