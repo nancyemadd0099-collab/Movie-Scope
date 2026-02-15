@@ -38,7 +38,7 @@ function GenreCard({ title, genreId }) {
                         src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                         alt={movie.title}
                     />
-                ))} 
+                ))}
             </div>
 
             <div className="genre-footer">

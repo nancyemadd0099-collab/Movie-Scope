@@ -34,7 +34,7 @@ function HeroMovie() {
     useEffect(() => {
         timeoutRef.current = setTimeout(() => {
             next()
-        }, 5000)
+        }, 2000)
 
         return () => clearTimeout(timeoutRef.current)
     }, [index])
