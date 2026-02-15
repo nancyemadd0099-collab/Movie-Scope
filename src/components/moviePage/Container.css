@@ -1,0 +1,17 @@
+.container-section{
+    background-color: var(--color-page);
+    padding: 150px var(--padding-desktop);
+    display: flex;
+flex-direction: column;
+gap: 150px;
+}
+
+.container-content{
+    border: 2px solid var(--border-card-black);
+    padding: 40px;
+    border-radius: var(--radius-btn);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
