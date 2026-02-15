@@ -5,12 +5,12 @@
     color: var(--color-text);
     background-color: var(--background-card-black);
     padding: 24px;
-    transition: 0.3s ease;
+    transition:background-color 0.53s ease;
     border: 2px solid var(--border-card-black);
 }
 
 .genre-card:hover {
-    transform: translateY(-6px);
+    background-color: var(--background-card-black-hover);
 }
 
 .genre-images {
