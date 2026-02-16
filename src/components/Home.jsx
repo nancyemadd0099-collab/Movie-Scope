@@ -3,7 +3,7 @@ import GenreCard from './GenreCard'
 import DeviceSupport from './homeContent/DeviceSupport';
 import Questions from './homeContent/Questions';
 import Promo from './homeContent/Promo';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Home() {
     const genres = [
@@ -23,8 +23,24 @@ function Home() {
         { title: "Family", id: 10751 },
         { title: "War", id: 10752 },
     ]
-    const cardsPerSlide = 5;
-    const maxIndex = Math.ceil(genres.length / cardsPerSlide);
+    const getCardPerSlide = () => {
+        if (window.innerWidth <= 767) return 2;
+        if (window.innerWidth <= 1024) return 3;
+        return 5;
+    };
+
+    const [cardPerSlide, setCardPerSlide] = useState(getCardPerSlide());
+
+    useEffect(() => {
+        const handleResize = () => {
+            setCardPerSlide(getCardPerSlide());
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const maxIndex = Math.ceil(genres.length / cardPerSlide);
+
 
     const [index, setIndex] = useState(0);
     const startX = useRef(0);
@@ -101,6 +117,18 @@ function Home() {
                                     genreId={genre.id}
                                 />
                             ))}
+                        </div>
+
+                        <div className="categories-indicator">
+                            <div className="indicator">
+                                {Array.from({ length: maxIndex }).map((_, i) => (
+                                    <span
+                                        key={i}
+                                        className={`dot ${i === index ? 'active' : ''}`}
+                                        onClick={() => setIndex(i)}
+                                    ></span>
+                                ))}
+                            </div>
                         </div>
                     </div>
 

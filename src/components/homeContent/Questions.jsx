@@ -20,8 +20,8 @@ function Questions() {
                 <p>Frequently Asked Questions</p>
                 <p>Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about MovieScope.</p>
             </div>
+            
             <div className="questions-grid">
-
                 <div className="questions-col">
                     {quesData.filter((_, i) => i % 2 === 0).map((item, index) => (
                         <div key={item.id} className={`ques-item ${activeId === item.id ? "active" : ""}`}

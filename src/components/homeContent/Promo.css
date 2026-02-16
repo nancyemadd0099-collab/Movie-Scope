@@ -16,32 +16,60 @@
     border: 2px solid var(--border-card-black);
 }
 
-.content-promo{
+.content-promo {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.content-promo p:nth-of-type(1){
+.content-promo p:nth-of-type(1) {
     font-size: 28px;
     color: var(--color-text);
 }
 
-.content-promo p:nth-of-type(2){
+.content-promo p:nth-of-type(2) {
     font-size: var(--normal-font-size);
     color: var(--color-paragraph);
 }
 
-.btn-promo button{
+.btn-promo button {
     padding: 14px 20px;
     color: var(--color-text);
     background-color: var(--color-main-red);
     border-radius: var(--radius-btn);
-    font-size:  var(--normal-font-size);
+    font-size: var(--normal-font-size);
     border: none;
     transition: background-color 0.35s ease-in-out
 }
 
-.btn-promo button:hover{
+.btn-promo button:hover {
     background-color: var(--color-main-hover-red);
+}
+
+
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+    .promo {
+        padding: 30px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .content-promo p:nth-of-type(1) {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .content-promo p:nth-of-type(2) {
+        font-size: var(--mobile-font-size);
+        text-align: center;
+    }
+
+    .btn-promo button {
+        padding: 14px 24px;
+        font-size: var(--mobile-font-size);
+    }
+
 }

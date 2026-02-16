@@ -100,18 +100,6 @@
         text-align: center;
     }
 
-    @keyframes slideFromLeft {
-        0% {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateX(-10px);
-            opacity: 1;
-        }
-    }
-
     .content-hero h1 {
         font-size: 32px;
     }
