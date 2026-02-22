@@ -1,12 +1,12 @@
-.container-section{
+.container-section {
     background-color: var(--color-page);
     padding: 150px var(--padding-desktop);
     display: flex;
-flex-direction: column;
-gap: 150px;
+    flex-direction: column;
+    gap: 150px;
 }
 
-.container-content{
+.container-content {
     border: 2px solid var(--border-card-black);
     padding: 40px;
     border-radius: var(--radius-btn);
@@ -15,3 +15,17 @@ gap: 150px;
     gap: 80px;
 }
 
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+    .container-section {
+        padding: 100px var(--padding-mobile);
+        gap: 100px;
+    }
+
+    .container-content {
+        padding: 50px 10px;
+        gap: 50px;
+    }
+}

@@ -15,6 +15,7 @@
 .categories {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .categories-header {
@@ -137,15 +138,15 @@
     }
 
     .categories-indicator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--border-card-black);
-    background-color: var(--background-btn-black);
-    border-radius: var(--radius-btn);
-    padding: 8px 12px;
-    margin: auto;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--border-card-black);
+        background-color: var(--background-btn-black);
+        border-radius: var(--radius-btn);
+        padding: 8px 12px;
+        margin: auto;
+    }
 
 
     .categories-indicator .indicator span {

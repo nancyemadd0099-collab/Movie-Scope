@@ -51,7 +51,6 @@ function Categories({title}) {
             <section onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                 <div className="categories-section">
                     <div className="categories">
-
                         <div className="header">
                             <p>{title}</p>
                         </div>
@@ -75,7 +74,6 @@ function Categories({title}) {
                                 <i className="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
-
                     </div>
 
                     <div className="categories-grid-wrapper">
@@ -94,6 +92,18 @@ function Categories({title}) {
                             ))}
                         </div>
                     </div>
+
+                    <div className="categories-indicator">
+                            <div className="indicator">
+                                {Array.from({ length: maxIndex }).map((_, i) => (
+                                    <span
+                                        key={i}
+                                        className={`dot ${i === index ? 'active' : ''}`}
+                                        onClick={() => setIndex(i)}
+                                    ></span>
+                                ))}
+                            </div>
+                        </div>
 
                 </div>
             </section>

@@ -18,7 +18,9 @@ const heroData = [
         image: "/poster(3).jpg"
     }
 ]
+
 function HeroMovie() {
+    console.log(heroData)
     const [index, setIndex] = useState(0)
     const timeoutRef = useRef(null)
     const startX = useRef(0)
@@ -75,14 +77,14 @@ function HeroMovie() {
             <div className="group">
                 <button className="arrow left" onClick={prev}><i class="fa-solid fa-arrow-left"></i></button>
                 <div className="indicators">
-                {heroData.map((_, i) => (
-                    <span
-                        key={i}
-                        className={`dot ${i === index ? 'active' : ''}`}
-                        onClick={() => setIndex(i)}
-                    ></span>
-                ))}
-                    </div>
+                    {heroData.map((_, i) => (
+                        <span
+                            key={i}
+                            className={`dot ${i === index ? 'active' : ''}`}
+                            onClick={() => setIndex(i)}
+                        ></span>
+                    ))}
+                </div>
                 <button className="arrow right" onClick={next}><i class="fa-solid fa-arrow-right"></i></button>
 
             </div>

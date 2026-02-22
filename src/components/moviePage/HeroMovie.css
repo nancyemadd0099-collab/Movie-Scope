@@ -1,4 +1,3 @@
-
 .hero {
     position: relative;
     overflow: hidden;
@@ -11,14 +10,19 @@
     inset: 0;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
 }
 
-.hero-slide.active{
+.hero-slide.active {
     opacity: 1;
     z-index: 1;
 }
 
-.hero-slide img{
+.hero-slide img {
     width: 100%;
     height: 100%;
     padding: 20px var(--padding-desktop) 0;
@@ -35,9 +39,9 @@
             transparent);
 }
 
-.hero-content{
+.hero-content {
     position: absolute;
-    z-index: 10000;
+    z-index: 100;
     top: 65%;
     left: 20%;
     width: 60%;
@@ -47,18 +51,18 @@
     text-align: center;
 }
 
-.hero-content h1{
+.hero-content h1 {
     color: var(--color-text);
     font-size: 30px;
 }
 
-.hero-content p{
+.hero-content p {
     color: var(--color-paragraph);
     font-size: var(--normal-font-size);
     padding: 20px 0;
 }
 
-.hero-content button{
+.hero-content button {
     border-radius: var(--radius-btn);
     background-color: var(--color-main-red);
     color: var(--color-text);
@@ -67,15 +71,16 @@
     border: none;
     transition: background-color .55s ease-in-out;
 }
-.hero-content button:hover{
+
+.hero-content button:hover {
     background-color: var(--color-main-hover-red);
 }
 
-.hero-content button i{
+.hero-content button i {
     margin-right: 12px;
 }
 
-.arrow{
+.arrow {
     position: absolute;
     top: 90%;
     z-index: 10000;
@@ -88,16 +93,21 @@
     transition: background-color .55s ease-in-out;
 }
 
-.arrow:hover{
+.arrow:hover {
     background-color: var(--background-btn-card);
 }
 
-.arrow.left{left: 150px;}
-.arrow.right{right: 150px;}
+.arrow.left {
+    left: 150px;
+}
 
-.indicators{
+.arrow.right {
+    right: 150px;
+}
+
+.indicators {
     position: absolute;
-    z-index: 10000;
+    z-index: 100;
     bottom: 70px;
     width: 100%;
     display: flex;
@@ -105,7 +115,7 @@
     justify-content: center;
 }
 
-.dot{
+.dot {
     width: 35px;
     height: 4px;
     background-color: #333333;
@@ -114,8 +124,47 @@
     border-radius: var(--radius-btn);
 }
 
-.dot.active{
+.dot.active {
     background-color: var(--color-main-red);
     width: 55px;
 }
 
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+
+    .hero-slide img {
+        padding: 80px 30px 50px;
+        border-radius: var(--radius-btn);
+        object-fit:cover;
+    }
+
+    .hero-content {
+        top: 50%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: var(--mobile-font-size);
+        padding: 20px 0;
+    }
+
+    .hero-content button {
+        font-size: var(--mobile-font-size);
+        padding: 12px 30px;
+        }
+
+        .arrow{
+            display: none;
+        }
+        .group .indicators{
+            bottom: 100px;
+        }
+
+}
