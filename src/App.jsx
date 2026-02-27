@@ -7,6 +7,7 @@ import Container from './components/moviePage/Container'
 import HeroMovie from './components/moviePage/HeroMovie'
 import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
+import HomeSupport from './components/supportPage/HomeSupport'
 
 function App() {
 
@@ -14,11 +15,11 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<><Hero /> <Home/></> } />
-        <Route path='/movies' element={<><HeroMovie /> <Container /></> } />
-        {/* <Route path='/' element={<><HeroMovie /> <Container /></> } /> */}
+        <Route path='/' element={<><Hero /> <Home /></>} />
+        <Route path='/movies' element={<><HeroMovie /> <Container /></>} />
+        <Route path='/support' element={<><HomeSupport /></>} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   )
 }
