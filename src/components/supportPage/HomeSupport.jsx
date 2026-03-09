@@ -17,37 +17,37 @@ function HomeSupport() {
                         <form action="#" method='POST'>
                             <div className="item-form">
                                 <div className="container-form">
-                                    <label for="name">First Name</label>
+                                    <label htmlFor="name">First Name</label>
                                     <input type="text" name='name' placeholder='Enter First Name' required />
                                 </div>
                                 <div className="container-form">
-                                    <label for="name">Last Name</label>
+                                    <label htmlFor="name">Last Name</label>
                                     <input type="text" name='name' placeholder='Enter Last Name' required />
                                 </div>
-
                             </div>
                             <div className="item-form">
                                 <div className="container-form">
-                                    <label for="email">email</label>
+                                    <label htmlFor="email">Email</label>
                                     <input type="email" name='email' placeholder='Enter Your Email' required />
                                 </div>
                                 <div className="container-form">
-                                    <label for="number">Phone Number</label>
-                                    <input type="number" name='number' placeholder='Enter Phone Number' required/>
+                                    <label htmlFor="number">Phone Number</label>
+                                    <input type="text" name='number' placeholder='Enter Phone Number' required />
                                 </div>
                             </div>
-
                             <div className="item-form">
-                                <div className="container-form">
-                                    <label for="text">Message</label>
-                                    <input type="text" name='text' placeholder='Enter Your Message' required />
+                                <div className="textarea-form">
+                                    <label htmlFor="text">Message</label>
+                                    <textarea placeholder="Enter Your Message"></textarea>
                                 </div>
                             </div>
-
                             <div className="item-form">
                                 <div className="check-form">
-                                    <input type="checkbox" name='checkbox' required />
-                                    <label for="text">I agree with Terms of Use and Privacy Policy</label>
+                                    <label htmlFor="text" className='checkbox-container'>
+                                        <input className='checkbox' type="checkbox" name='checkbox' required />
+                                        <span className='custom-check'></span>
+                                        I agree with Terms of Use and Privacy Policy
+                                    </label>
                                 </div>
                                 <div className="button-form">
                                     <button>Send Message</button>
@@ -56,10 +56,8 @@ function HomeSupport() {
                         </form>
                     </div>
                 </div>
-
                 <Questions />
                 <Promo />
-                
             </section>
         </>
     )

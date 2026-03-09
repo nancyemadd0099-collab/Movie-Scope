@@ -112,7 +112,7 @@
 /* Large Mobile */
 @media (max-width: 767px) {
     .questions {
-        gap: 40px;
+        gap: 20px;
     }
 
     .questions-header p:nth-of-type(1) {

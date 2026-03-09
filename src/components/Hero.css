@@ -6,7 +6,7 @@
         linear-gradient(to right,
             rgba(0, 0, 0, .35),
             rgba(0, 0, 0, 0)),
-        url('/public/background-strangerthings3.jpg');
+        url('/background-strangerthings3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

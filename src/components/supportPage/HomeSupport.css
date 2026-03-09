@@ -1,0 +1,247 @@
+.home-support {
+    padding: 130px var(--padding-desktop);
+    background-color: var(--color-page);
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.hero-support {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container h1 {
+    font-size: 38px;
+    color: var(--color-text);
+}
+
+.sub-container p {
+    font-size: var(--normal-font-size);
+    color: var(--color-paragraph);
+}
+
+.sub-container img {
+    margin-top: 50px;
+}
+
+.form-support {
+    border: 1px solid var(--border-card-black);
+    padding: 40px;
+    border-radius: var(--radius-btn);
+    background-color: var(--background-btn-black);
+}
+
+.item-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+}
+
+label {
+    font-size: var(--normal-font-size);
+    color: var(--color-text);
+}
+
+.textarea-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+input,
+textarea {
+    padding: 16px;
+    border-radius: var(--radius-btn);
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: var(--background-btn-card);
+    border: 2px solid var(--border-card-black);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid rgb(116, 115, 115);
+    background-color: #1f1f1f;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-box-shadow: 0 0 0px 1000px transparet inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input::placeholder {
+    color: var(--color-paragraph);
+    font-size: 14px;
+}
+
+.check-form {
+    display: flex;
+    align-items: center;
+}
+
+.check-form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox-container {
+    font-size: 18px;
+    color: var(--color-paragraph);
+}
+
+.custom-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-card-black);
+    background-color: var(--background-btn-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.custom-check::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    display: none;
+}
+
+.checkbox:checked+.custom-check {
+    background-color: red;
+    border-color: red;
+}
+
+.checkbox:checked+.custom-check::after {
+    display: block;
+}
+
+.checkbox-container input:checked+.custom-check::after {
+    display: block;
+}
+
+.button-form button {
+    padding: 14px 20px;
+    color: var(--color-text);
+    background-color: var(--color-main-red);
+    border-radius: var(--radius-btn);
+    font-size: var(--normal-font-size);
+    border: none;
+    transition: background-color 0.35s ease-in-out
+}
+
+.button-form button:hover {
+    background-color: var(--color-main-hover-red);
+}
+
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+    .home-support {
+        padding: 130px var(--padding-mobile) 100px;
+        gap: 80px;
+    }
+
+    .hero-support {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-container h1 {
+        font-size: 28px;
+    }
+
+    .sub-container p {
+        font-size: var(--mobile-font-size);
+        margin-top: 15px;
+    }
+
+    .sub-container img {
+        margin-top: 15px;
+    }
+
+    .form-support {
+        padding: 24px;
+    }
+
+    .item-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    form {
+        gap: 20px;
+    }
+
+    .container-form {
+        width: 100%;
+    }
+
+    label {
+        font-size: var(--mobile-font-size);
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+        font-size:  var(--mobile-font-size);
+    }
+
+    .button-form button {
+        padding: 14px 24px;
+        width: 100%;
+        font-size: var(--mobile-font-size);
+    }
+
+    .checkbox-container {
+    font-size:var(--mobile-font-size);
+}
+}
