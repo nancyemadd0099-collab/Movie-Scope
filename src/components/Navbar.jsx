@@ -34,7 +34,7 @@ function Navbar() {
                         <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={()=>setMenuOpen(false)}>Home</Link>
                         <Link to="/Movies" className={location.pathname === '/Movies' ? 'active' : ''} onClick={()=>setMenuOpen(false)}>Movies & Shows</Link>
                         <Link to="/Support" className={location.pathname === '/Support' ? 'active' : ''} onClick={()=>setMenuOpen(false)}>Support</Link>
-                        <Link to="/Subscriptions" className={location.pathname === '/Subscriptions' ? 'active' : ''} onClick={()=>setMenuOpen(false)}>Subscriptions</Link>
+                        <Link to="/subscription" className={location.pathname === '/subscription' ? 'active' : ''} onClick={()=>setMenuOpen(false)}>Subscriptions</Link>
                     </div>
                     <div className="nav-actions">
                         <p className='search-icon'><i class="fa-solid fa-magnifying-glass"></i></p>

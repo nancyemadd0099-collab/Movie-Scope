@@ -1,0 +1,40 @@
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    border: 1px solid var(--border-card-black);
+
+}
+
+thead {
+    background-color: var(--background-btn-black);
+}
+
+th {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 24px;
+    width: 25%;
+    border: 1px solid var(--border-card-black);
+}
+
+td {
+    padding: 24px;
+    color: var(--color-paragraph);
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-card-black);
+}
+
+.popular {
+    background: var(--color-main-red);
+    color: var(--color-text);
+    font-size: 14px;
+    padding: 6px;
+    margin-left: 8px;
+    border-radius: var(--radius-btn);
+}

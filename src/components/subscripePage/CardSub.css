@@ -1,0 +1,85 @@
+.card-sub{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--background-card-black);
+    border-radius: var(--radius-btn);
+    border: 1px solid var(--border-card-black);
+        opacity: 1;
+    transform: translateX(0);
+    transition: background-color 0.35s ease,transform 0.6s ease, opacity 0.6s ease;
+}
+
+.card-sub:hover{
+    background-color: var(--background-card-black-hover);
+}
+
+.cards-sub.animate .card-sub {
+    opacity: 0;
+    transform: translateX(120px);
+}
+
+.cards-sub.animate .card-sub:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.cards-sub.animate .card-sub:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+
+.content-card h1{
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content-card p{
+    color: var(--color-paragraph);
+    font-size: var(--normal-font-size);
+}
+
+.price-card{
+    color: var(--color-paragraph);
+    font-size: var(--normal-font-size);
+}
+.price-card span{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.buttons-card{
+    display: flex;
+    gap: 12px;
+}
+
+.buttons-card button{
+    width: 50%;
+    padding: 14px 20px;
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    border-radius: var(--radius-btn);
+    color: var(--color-text);
+}
+
+.buttons-card button:nth-of-type(1){
+background-color: var(--background-btn-card);
+border: 1px solid var(--border-card-black);
+transition: background-color 0.35s ease
+}
+
+.buttons-card button:nth-of-type(1):hover{
+background-color: var(--background-btn-black);
+}
+
+.buttons-card button:nth-of-type(2){
+background-color: var(--color-main-red);
+border: none;
+transition: background-color 0.35s ease
+}
+
+.buttons-card button:nth-of-type(2):hover{
+background-color: var(--color-main-hover-red);
+}

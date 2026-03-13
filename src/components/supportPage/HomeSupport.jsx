@@ -32,7 +32,14 @@ function HomeSupport() {
                                 </div>
                                 <div className="container-form">
                                     <label htmlFor="number">Phone Number</label>
-                                    <input type="text" name='number' placeholder='Enter Phone Number' required />
+                                    <input
+                                        type="tel"
+                                        name='number'
+                                        placeholder='Enter Phone Number'
+                                        onInput={(e) => {
+                                            e.target.value = e.target.value.replace(/\D/g, '').slice(0, 11);
+                                        }}
+                                        required />
                                 </div>
                             </div>
                             <div className="item-form">

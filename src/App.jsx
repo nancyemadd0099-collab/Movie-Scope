@@ -8,6 +8,7 @@ import HeroMovie from './components/moviePage/HeroMovie'
 import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
 import HomeSupport from './components/supportPage/HomeSupport'
+import HomeSub from './components/subscripePage/HomeSub'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<><Hero /> <Home /></>} />
         <Route path='/movies' element={<><HeroMovie /> <Container /></>} />
         <Route path='/support' element={<><HomeSupport /></>} />
+        <Route path='/subscription' element={<><HomeSub /></>} />
       </Routes>
       <Footer />
     </>
