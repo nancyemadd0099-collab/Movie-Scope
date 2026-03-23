@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import './PricingTable.css'
 
 const plan = [
@@ -44,10 +45,12 @@ const plan = [
 ]
 
 function PricingTable() {
-
+    const [activePlan, setActivePlan] = useState(1)
+    const planTable = plan[activePlan];
     return (
         <>
-            <div className="table-container">
+            {/* Table Desktop */}
+            <div className="table-desktop">
                 <table>
                     <thead>
                         <tr>
@@ -126,6 +129,72 @@ function PricingTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            {/* Table Mobile */}
+            <div className="mobile-only">
+
+                <div className="tabs">
+                    {plan.map((item, index) => (
+                        <button
+                            key={index}
+                            className={activePlan === index ? "active" : ""}
+                            onClick={() => setActivePlan(index)}
+                        >
+                            {item.name}
+                        </button>
+                    ))}
+                </div>
+
+                <div className="mobile-card">
+                    <div className="mobile-grid">
+
+                        <div>
+                            <span>Price</span>
+                            <p>{planTable.price}</p>
+                        </div>
+
+                        <div>
+                            <span>Free Trail</span>
+                            <p>{planTable.trail}</p>
+                        </div>
+
+                        <div className="full">
+                            <span>Content</span>
+                            <p>{planTable.contant}</p>
+                        </div>
+
+                        <div className="full">
+                            <span>Devices</span>
+                            <p>{planTable.devices}</p>
+                        </div>
+                        <div>
+                            <span>Cancel Anytime</span>
+                            <p>{planTable.cancel}</p>
+                        </div>
+                        <div>
+                            <span>HDR</span>
+                            <p>{planTable.HDR}</p>
+                        </div>
+                        <div>
+                            <span>Dolby Atmos</span>
+                            <p>{planTable.dolby}</p>
+                        </div>
+                        <div>
+                            <span>Ad - Free</span>
+                            <p>{planTable.adfree}</p>
+                        </div>
+                        <div>
+                            <span>Offline Viewing</span>
+                            <p>{planTable.offline}</p>
+                        </div>
+                        <div>
+                            <span>Family Sharing</span>
+                            <p>{planTable.family}</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </>
     )

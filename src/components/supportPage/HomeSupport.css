@@ -12,22 +12,22 @@
     gap: 80px;
 }
 
-.sub-container {
+.sup-container {
     display: flex;
     flex-direction: column;
 }
 
-.sub-container h1 {
+.sup-container h1 {
     font-size: 38px;
     color: var(--color-text);
 }
 
-.sub-container p {
+.sup-container p {
     font-size: var(--normal-font-size);
     color: var(--color-paragraph);
 }
 
-.sub-container img {
+.sup-container img {
     margin-top: 50px;
 }
 
@@ -191,16 +191,16 @@ input::placeholder {
         flex-direction: column;
     }
 
-    .sub-container h1 {
+    .sup-container h1 {
         font-size: 28px;
     }
 
-    .sub-container p {
+    .sup-container p {
         font-size: var(--mobile-font-size);
         margin-top: 15px;
     }
 
-    .sub-container img {
+    .sup-container img {
         margin-top: 15px;
     }
 

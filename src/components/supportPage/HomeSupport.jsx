@@ -8,7 +8,7 @@ function HomeSupport() {
         <>
             <section className='home-support'>
                 <div className="hero-support">
-                    <div className="sub-container">
+                    <div className="sup-container">
                         <h1>Welcome to our support page!</h1>
                         <p>We're here to help you with any problems you may be having with our product.</p>
                         <img src="/Sub Container.png" alt="subContainer" />
