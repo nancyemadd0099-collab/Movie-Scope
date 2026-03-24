@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMoviesByGenre } from "../services/tmdb";
 import './GenreCard.css'
+import { Link } from "react-router-dom";
 
 
 function GenreCard({ title, genreId }) {
@@ -31,21 +32,22 @@ function GenreCard({ title, genreId }) {
     }, [genreId]);
 
     return (
-        <div className="genre-card">
-            <div className="genre-images">
-                {movies.map((movie) => (
-                    <img key={movie.id}
-                        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                        alt={movie.title}
-                    />
-                ))}
+        <Link to={`/genre/${genreId}/${title}`}>
+            <div className="genre-card">
+                <div className="genre-images">
+                    {movies.map((movie) => (
+                        <img key={movie.id}
+                            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                            alt={movie.title}
+                        />
+                    ))}
+                </div>
+                <div className="genre-footer">
+                    <span>{title}</span>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
             </div>
-
-            <div className="genre-footer">
-                <span>{title}</span>
-                <span><i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-        </div>
+        </Link>
     )
 }
 

@@ -4,7 +4,7 @@
     --color-page: #121212;
     --color-text: #FFFFFF;
     --color-paragraph: #999999;
-    --color-text-navbar:#cecece;
+    --color-text-navbar: #cecece;
 
     --background-card-black: #1F1F1F;
     --background-card-black-hover: #2c2c2c;
@@ -15,8 +15,8 @@
 
     --radius-btn: 8px;
 
-    --normal-font-size:16px;
-    --mobile-font-size:14px;
+    --normal-font-size: 16px;
+    --mobile-font-size: 14px;
 
     --padding-desktop: 120px;
     --padding-mobile: 16px;
@@ -32,6 +32,10 @@ html,
 body {
     overflow-x: hidden;
 }
+
+/* html {
+  scroll-behavior: smooth;
+} */
 
 a {
     all: unset;
