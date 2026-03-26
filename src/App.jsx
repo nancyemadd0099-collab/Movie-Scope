@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router-dom"
 import HomeSupport from './components/supportPage/HomeSupport'
 import HomeSub from './components/subscripePage/HomeSub'
 import GenrePage from './components/genrePage/GenrePage'
+import MovieDetails from './components/movieDetails/MovieDetails'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/support' element={<><HomeSupport /></>} />
         <Route path='/subscription' element={<><HomeSub /></>} />
         <Route path='/genre/:id/:title' element={<GenrePage />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
       <Footer />
     </>

@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './GenrePage.css'
 import { useEffect, useState } from 'react';
 import { getMoviesByGenre } from '../../services/tmdb';
@@ -24,21 +24,23 @@ function GenrePage() {
                     </div>
                     <div className="genre-cards">
                         {movies.map(movie => (
-                            <div className="movie-card">
-                                <img
-                                    key={movie.id}
-                                    src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                                    alt={movie.title}
-                                />
-                                <div className="content-image">
-                                    <p>{movie.title}</p>
-                                    <p>
-                                        {movie.overview
-                                            ? movie.overview.slice(0, 80) + "..."
-                                            : "No description available"}
-                                    </p>
+                            <Link to={`/movie/${movie.id}`}>
+                                <div className="movie-card">
+                                    <img
+                                        key={movie.id}
+                                        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                                        alt={movie.title}
+                                    />
+                                    <div className="content-image">
+                                        <p><i class="fa-solid fa-play"></i>{movie.title}</p>
+                                        <p>
+                                            {movie.overview
+                                                ? movie.overview.slice(0, 70) + "..."
+                                                : "No description available"}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

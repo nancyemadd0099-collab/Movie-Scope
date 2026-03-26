@@ -75,7 +75,7 @@ function HeroMovie() {
             ))}
 
             <div className="group">
-                <button className="arrow left" onClick={prev}><i class="fa-solid fa-arrow-left"></i></button>
+                <button className="arrow-left" onClick={prev}><i class="fa-solid fa-arrow-left"></i></button>
                 <div className="indicators">
                     {heroData.map((_, i) => (
                         <span
@@ -85,7 +85,7 @@ function HeroMovie() {
                         ></span>
                     ))}
                 </div>
-                <button className="arrow right" onClick={next}><i class="fa-solid fa-arrow-right"></i></button>
+                <button className="arrow-right" onClick={next}><i class="fa-solid fa-arrow-right"></i></button>
 
             </div>
         </section>
