@@ -1,51 +1,67 @@
 import GenreCard from '../GenreCard';
 import './Categories.css'
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-function Categories({title}) {
+function Categories({ title }) {
 
     const genres = [
-            { title: "Action", id: 28 },
-            { title: "Adventure", id: 12 },
-            { title: "Comedy", id: 35 },
-            { title: "Drama", id: 18 },
-            { title: "Horror", id: 27 },
-            { title: "Romance", id: 10749 },
-            { title: "Sci-Fi", id: 878 },
-            { title: "Thriller", id: 53 },
-            { title: "Animation", id: 16 },
-            { title: "Fantasy", id: 14 },
-            { title: "Crime", id: 80 },
-            { title: "History", id: 36 },
-            { title: "Documentary", id: 99 },
-            { title: "Family", id: 10751 },
-            { title: "War", id: 10752 },
-        ]
-        const cardsPerSlide = 5;
-        const maxIndex = Math.ceil(genres.length / cardsPerSlide);
-    
-        const [index, setIndex] = useState(0);
-        const startX = useRef(0);
-    
-        const next = () => {
-            setIndex((prev) => (prev + 1) % maxIndex);
+        { title: "Action", id: 28 },
+        { title: "Adventure", id: 12 },
+        { title: "Comedy", id: 35 },
+        { title: "Drama", id: 18 },
+        { title: "Horror", id: 27 },
+        { title: "Romance", id: 10749 },
+        { title: "Sci-Fi", id: 878 },
+        { title: "Thriller", id: 53 },
+        { title: "Animation", id: 16 },
+        { title: "Fantasy", id: 14 },
+        { title: "Crime", id: 80 },
+        { title: "History", id: 36 },
+        { title: "Documentary", id: 99 },
+        { title: "Family", id: 10751 },
+        { title: "War", id: 10752 },
+    ]
+
+    const getCardPerSlide = () => {
+        if (window.innerWidth <= 767) return 2;
+        if (window.innerWidth <= 1024) return 3;
+        return 5;
+    };
+
+    const [cardsPerSlide, setCardsPerSlide] = useState(getCardPerSlide());
+    useEffect(() => {
+        const handleResize = () => {
+            setCardsPerSlide(getCardPerSlide());
         };
-    
-        const prev = () => {
-            setIndex((prev) => (prev - 1 + maxIndex) % maxIndex);
-        };
-    
-        const handleTouchStart = (e) => {
-            startX.current = e.touches[0].clientX;
-        };
-    
-        const handleTouchEnd = (e) => {
-            const endX = e.changedTouches[0].clientX;
-            if (startX.current - endX > 50) next();
-            if (endX - startX.current > 50) prev();
-        };
-    
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const maxIndex = Math.ceil(genres.length / cardsPerSlide);
+
+    const [index, setIndex] = useState(0);
+    const startX = useRef(0);
+
+    const next = () => {
+        setIndex((prev) => (prev + 1) % maxIndex);
+    };
+
+    const prev = () => {
+        setIndex((prev) => (prev - 1 + maxIndex) % maxIndex);
+    };
+
+    const handleTouchStart = (e) => {
+        startX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX.current - endX > 50) next();
+        if (endX - startX.current > 50) prev();
+    };
+
     return (
         <>
             <section onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
@@ -94,16 +110,16 @@ function Categories({title}) {
                     </div>
 
                     <div className="categories-indicator">
-                            <div className="indicator">
-                                {Array.from({ length: maxIndex }).map((_, i) => (
-                                    <span
-                                        key={i}
-                                        className={`dot ${i === index ? 'active' : ''}`}
-                                        onClick={() => setIndex(i)}
-                                    ></span>
-                                ))}
-                            </div>
+                        <div className="indicator">
+                            {Array.from({ length: maxIndex }).map((_, i) => (
+                                <span
+                                    key={i}
+                                    className={`dot ${i === index ? 'active' : ''}`}
+                                    onClick={() => setIndex(i)}
+                                ></span>
+                            ))}
                         </div>
+                    </div>
 
                 </div>
             </section>
