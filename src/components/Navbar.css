@@ -1,7 +1,7 @@
 .navbar-section {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
     transition: background-color 0.35s ease;
 }
