@@ -1,4 +1,4 @@
-import GenreCard from '../GenreCard';
+import GenreCard from '../homeContent/GenreCard';
 import './Categories.css'
 
 import { useEffect, useRef, useState } from 'react';

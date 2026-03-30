@@ -1,5 +1,4 @@
 import { useNavigate, useParams } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
 import './MovieDetails.css'
 import { useEffect, useState } from 'react';
 import Promo from '../homeContent/Promo';

@@ -1,7 +1,7 @@
 .navbar-section {
     position: fixed;
     top: 0;
-    z-index: 1000000;
+    z-index: 10;
     width: 100%;
     transition: background-color 0.35s ease;
 }
@@ -92,6 +92,10 @@
     background-color: var(--color-main-hover-red);
 }
 
+.nav-actions .active button {
+    background-color: var(--color-main-hover-red);
+}
+
 .menu-btn {
     display: none;
     flex-direction: column;
@@ -104,10 +108,11 @@
     transition: background-color .55s ease;
 }
 
-.menu-btn:hover{
+.menu-btn:hover {
     background-color: var(--background-card-black-hover);
 }
-.menu-btn.active{
+
+.menu-btn.active {
     background-color: var(--background-card-black-hover);
 }
 
@@ -161,14 +166,14 @@
         display: none;
     }
 
-    .nav-links a{
+    .nav-links a {
         font-size: var(--mobile-font-size);
     }
 
     .menu-btn {
         display: flex;
         align-items: flex-end;
-        
+
     }
 
     .navbar-group {
@@ -179,7 +184,7 @@
         order: 1;
     }
 
-    .logo p{
+    .logo p {
         font-size: 26px;
     }
 

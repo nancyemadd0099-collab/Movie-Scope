@@ -1,8 +1,8 @@
 import './Home.css'
 import GenreCard from './GenreCard'
-import DeviceSupport from './homeContent/DeviceSupport';
-import Questions from './homeContent/Questions';
-import Promo from './homeContent/Promo';
+import DeviceSupport from './DeviceSupport';
+import Questions from './Questions';
+import Promo from './Promo';
 import { useEffect, useRef, useState } from 'react';
 
 function Home() {

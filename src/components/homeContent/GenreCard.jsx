@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMoviesByGenre } from "../services/tmdb";
+import { getMoviesByGenre } from "../../services/tmdb";
 import './GenreCard.css'
 import { Link } from "react-router-dom";
 
