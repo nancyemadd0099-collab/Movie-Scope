@@ -49,7 +49,6 @@
     border-radius: var(--radius-btn);
     transition: background-color 0.35s ease-in-out,
         color 0.35s ease-in-out;
-    ;
 }
 
 .nav-links a:hover {
@@ -78,6 +77,10 @@
 
 .nav-actions p:hover {
     color: var(--color-main-hover-red);
+}
+
+.nav-actions i{
+    margin-right: 10px;
 }
 
 .nav-actions button {

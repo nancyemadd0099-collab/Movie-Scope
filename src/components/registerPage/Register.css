@@ -1,170 +1,159 @@
-.register-section {
-    background-color: var(--background-card-black);
+.auth-section {
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 170px var(--padding-desktop) 100px;
+    align-items: center;
+    background: var(--color-page);
 }
 
-form{
-    margin-top: 30px;
-    gap: 34px;
-}
-
-.register-card {
-    padding: 40px;
-    width: 40%;
-    border: 2px solid var(--border-card-black);
+.auth-box {
+    position: relative;
+    width: 900px;
+    height: 550px;
+    background: var(--color-page);
     border-radius: var(--radius-btn);
-    background-color: whitesmoke;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 3px rgba(114, 113, 113, 0.2);
 }
 
-.register-card ::placeholder{
-    color:rgba(128, 128, 128, 0.808);
-    font-size: var(--normal-font-size);
-}
-
-.register-card h1 {
-    font-size: 32px;
-    color: var(--color-page);
-    text-align: center;
-}
-
-.register-card>p {
-    font-size: 18px;
-    color: var(--background-card-black-hover);
-    text-align: center;
-    font-weight: 400;
-}
-
-.email-box,
-.password-box {
+.form-box {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
     display: flex;
     flex-direction: column;
-}
-
-.email-box input,
-.password-box input {
-    background-color: rgba(128, 128, 128, 0.26);
-    color:black;
-    font-weight: 600;
-    border: none;
-    font-size: var(--normal-font-size);
-    padding: 14px;
-}
-
-.email-box input:focus,
-.input-wrapper:focus-within {
-    border: 1px solid var(--border-card-black);
-}
-
-.email-box label,
-.password-box label {
-    font-size: var(--normal-font-size);
-    color: black;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.input-wrapper {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    border: none;
-    border-radius: var(--radius-btn);
-    background-color: rgba(128, 128, 128, 0.26);
-    border: none;
+    transition: 0.6s;
 }
 
-.input-wrapper input {
-    width: 95%;
-    border: none;
-    background-color: transparent;
-}
-
-.toggle-password {
-    color: rgb(82, 81, 81);
-    font-size: 18px;
-    margin-right: 20px;
-}
-
-.toggle-password:hover{
-    color: var(--background-card-black);
-}
-
-.remember-forgot {
+.overlay-box {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background: linear-gradient(135deg, var(--color-main-hover-red), var(--color-main-red));
+    color: white;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    gap:30px;
 }
 
-.remember input[type="checkbox"] {
-    transform: scale(1.5);
-    accent-color: black;
-    cursor: pointer;
+.auth-box.active .form-box {
+    transform: translateX(100%);
 }
 
-.remember label {
-    font-size: var(--normal-font-size);
-    margin-left: 10px;
-    color: var(--background-card-black);
-    font-weight: 600;
+.auth-box.active .overlay-box {
+    transform: translateX(-100%);
 }
 
-.forget a{
-    font-size: var(--normal-font-size);
-    color: blue;
-    font-weight: 600;
-}
-
-.forget a:hover{
-    text-decoration: underline;
-    color: rgb(3, 3, 207);
-}
-
-.signin{
-    width: 100%;
-}
-
-.signin button{
-    width: 100%;
-    border-radius: var(--radius-btn);
-    border: none;
-    padding: 12px;
-    font-size: var(--normal-font-size);
-    font-weight: 600;
+.overlay-box h2{
+    font-weight: 700;
+    font-size: 35px;
     color: var(--color-text);
-    background-color: var(--background-btn-card);
-    transition: background-color .3s ease-in-out;
 }
 
-.signin button:hover{
-    background-color: var(--border-card-black);
-}
-
-.auth-switch{
-    text-align: center;
-}
-
-.auth-switch p{
-    font-size: var(--normal-font-size);
-    color: var(--background-card-black-hover);
-    font-weight: 600;
-}
-
-.auth-switch p span{
-    margin-left: 6px;
-    color: blue;
+.overlay-box p{
+    color: var(--color-text);
     font-weight: 400;
-    cursor: pointer;
-}
-.auth-switch p span:hover{
-    text-decoration: underline;
-    color: rgb(3, 3, 207);
+    width: 70%;
+    text-align: center;
+    font-size: var(--normal-font-size);
 }
 
-.error{
-    font-size: 14px;
-    margin-top: 6px;
-    margin-left: 12px;
-    color: rgb(216, 5, 5);
+.overlay-box button,
+.form-box button{
+    border-radius: var(--radius-btn);
+    padding: 12px;
+    width: 150px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: var(--color-text);
+    transition: background-color 0.25s ease-in-out;
+    font-size: var(--normal-font-size);
+}
+
+.overlay-box button:hover{
+    background-color: rgba(128, 128, 128, 0.137);
+}
+
+.form-box h2{
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.links div i{
+    font-size: 20px;
+    color: var(--color-text);
+    padding: 5px;
+}
+
+.links div{
+    border: 2px solid var(--border-card-black);
+    padding: 10px;
+    border-radius: 50%;
+    width: 55px;
+    text-align: center;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.links div:hover{
+    background-color: rgba(128, 128, 128, 0.119);
+}
+
+.form-box p{
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: var(--normal-font-size);
+}
+
+.inputs-signup,
+.inputs-signin{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 14px 0;
+}
+
+.inputs-signup input
+,.inputs-signin input{
+    width: 400px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: rgba(128, 128, 128, 0.062);
+}
+
+.form-box button{
+    background-color: var(--color-main-red);
+    border: none;
+    transition: background-color 0.25s ease-in-out;
+}  
+
+.form-box button:hover{
+    background-color: var(--color-main-hover-red);
+}
+
+
+.form-box a{
+    color: var(--color-text);
+    margin-bottom: 14px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    transition: color 0.25s ease-in-out;
+}
+
+.form-box a:hover{
+    color: var(--color-main-hover-red);
 }

@@ -3,12 +3,12 @@
     inset: 0;
     background: url('/public/backgroundhero\(1\).jpg');
     pointer-events: none;
-    mask-image: radial-gradient(circle 120px at center,
+    mask-image: radial-gradient(circle 420px at center,
             transparent 0%,
             rgba(0, 0, 0, 0.8) 30%,
             black 60%);
 
-    -webkit-mask-image: radial-gradient(circle 120px at center,
+    -webkit-mask-image: radial-gradient(circle 420px at center,
             transparent 0%,
             rgba(0, 0, 0, 0.8) 30%,
             black 60%);
@@ -58,11 +58,13 @@
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
-    color: var(--background-card-black);
+    /* color: var(--background-card-black); */
+    color: var(--color-text);
 }
 
 .content-hero p {
     color: var(--background-card-black-hover);
+    /* color: var(--color-text); */
     font-size: 20px;
     width: 50%;
 }

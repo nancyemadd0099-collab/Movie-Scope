@@ -13,10 +13,10 @@ function Hero() {
             const y = e.clientY;
 
             spotlight.style.makeImage =
-                `radial-gradient(circle 420px at ${x}px ${y}px, transparent 0%, black 60%)`;
+                `radial-gradient(circle 620px at ${x}px ${y}px, transparent 0%, black 60%)`;
 
             spotlight.style.webkitMaskImage =
-                `radial-gradient(circle 420px at ${x}px ${y}px, transparent 0%, black 60%)`;
+                `radial-gradient(circle 620px at ${x}px ${y}px, transparent 0%, black 60%)`;
 
         };
         window.addEventListener("mousemove", move);

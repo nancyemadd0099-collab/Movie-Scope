@@ -48,6 +48,7 @@ function Navbar() {
                         <NavLink to="/register">
                             {({ isActive }) => (
                                 <button className={isActive ? "active" : ""}>
+                                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
                                     Login
                                 </button>
                             )}
