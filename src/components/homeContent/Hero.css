@@ -1,12 +1,26 @@
+.spotlight {
+    position: absolute;
+    inset: 0;
+    background: url('/public/backgroundhero\(1\).jpg');
+    pointer-events: none;
+    mask-image: radial-gradient(circle 120px at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.8) 30%,
+            black 60%);
+
+    -webkit-mask-image: radial-gradient(circle 120px at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.8) 30%,
+            black 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #hero-section {
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 1)),
-        linear-gradient(to right,
-            rgba(0, 0, 0, .35),
-            rgba(0, 0, 0, 0)),
-        url('/background-strangerthings3.jpg');
+    position: relative;
+
+    background: url('/public/backgroundhero\(2\).jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -24,6 +38,7 @@
     flex-direction: column;
     width: 50%;
     gap: 18px;
+
 }
 
 @keyframes slideFromLeft {
@@ -39,13 +54,17 @@
 }
 
 .content-hero h1 {
-    font-size: 58px;
-    color: var(--color-text);
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    color: var(--background-card-black);
 }
 
 .content-hero p {
-    color: var(--color-paragraph);
-    font-size: var(--normal-font-size);
+    color: var(--background-card-black-hover);
+    font-size: 20px;
+    width: 50%;
 }
 
 .content-hero button {
@@ -73,14 +92,8 @@
 /* Large Mobile */
 @media (max-width: 767px) {
     #hero-section {
-        background: linear-gradient(to bottom,
-                rgba(0, 0, 0, 1),
-                rgba(0, 0, 0, 0.3),
-                rgba(0, 0, 0, 1)),
-            linear-gradient(to right,
-                rgba(0, 0, 0, .35),
-                rgba(0, 0, 0, 0)),
-            url('/background-strangerthings3-mobile.jpg');
+        background:
+            url('/public/backgroundhero\(1\).jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -88,6 +101,10 @@
         display: flex;
         align-items: center;
         padding: 0 var(--padding-mobile);
+    }
+
+    .spotlight {
+        display: none;
     }
 
     .content-hero {
@@ -103,11 +120,15 @@
 
     .content-hero h1 {
         font-size: 32px;
+        color: rgb(217, 216, 216);
+        width: 100%;
+        margin-top: 250px;
     }
 
     .content-hero p {
         font-size: var(--mobile-font-size);
-        color: var(--color-text-navbar);
+        color: var(--color-paragraph);
+        width: 100%;
     }
 
     .content-hero button {
