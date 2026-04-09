@@ -42,6 +42,15 @@ function Navbar() {
                             onClick={() => setMenuOpen(false)}>Movies & Shows</Link>
                         <Link to="/Support" className={location.pathname === '/Support' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Support</Link>
                         <Link to="/subscription" className={location.pathname === '/subscription' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Subscriptions</Link>
+                        <hr />
+                        <NavLink className={"mobile-login"} to="/register" onClick={() => setMenuOpen(false)}>
+                            {({ isActive }) => (
+                                <button className={`mobile-login-btn ${isActive ? "active" : ""}`}>
+                                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                    Login
+                                </button>
+                            )}
+                        </NavLink>
                     </div>
                     <div className="nav-actions">
                         {/* <p className='search-icon'><i class="fa-solid fa-magnifying-glass"></i></p> */}
@@ -63,6 +72,7 @@ function Navbar() {
                         <span></span>
                         <span></span>
                         <span></span>
+
                     </div>
                 </div>
             </nav>
