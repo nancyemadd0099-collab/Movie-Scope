@@ -40,7 +40,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.6s;
-    gap:30px;
+    gap: 30px;
 }
 
 .auth-box.active .form-box {
@@ -51,13 +51,13 @@
     transform: translateX(-100%);
 }
 
-.overlay-box h2{
+.overlay-box h2 {
     font-weight: 700;
     font-size: 35px;
     color: var(--color-text);
 }
 
-.overlay-box p{
+.overlay-box p {
     color: var(--color-text);
     font-weight: 400;
     width: 70%;
@@ -66,7 +66,7 @@
 }
 
 .overlay-box button,
-.form-box button{
+.form-box button {
     border-radius: var(--radius-btn);
     padding: 12px;
     width: 150px;
@@ -77,29 +77,29 @@
     font-size: var(--normal-font-size);
 }
 
-.overlay-box button:hover{
+.overlay-box button:hover {
     background-color: rgba(128, 128, 128, 0.137);
 }
 
-.form-box h2{
+.form-box h2 {
     color: var(--color-text);
     font-size: 35px;
     font-weight: 700;
 }
 
-.links{
+.links {
     display: flex;
     gap: 30px;
     margin: 20px 0;
 }
 
-.links div i{
+.links div i {
     font-size: 20px;
     color: var(--color-text);
     padding: 5px;
 }
 
-.links div{
+.links div {
     border: 2px solid var(--border-card-black);
     padding: 10px;
     border-radius: 50%;
@@ -108,26 +108,26 @@
     transition: background-color 0.25s ease-in-out;
 }
 
-.links div:hover{
+.links div:hover {
     background-color: rgba(128, 128, 128, 0.119);
 }
 
-.form-box p{
+.form-box p {
     color: var(--color-text);
     font-weight: 400;
     font-size: var(--normal-font-size);
 }
 
 .inputs-signup,
-.inputs-signin{
+.inputs-signin {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 14px 0;
 }
 
-.inputs-signup input
-,.inputs-signin input{
+.inputs-signup input,
+.inputs-signin input {
     width: 400px;
     border-top: none;
     border-right: none;
@@ -135,18 +135,18 @@
     background-color: rgba(128, 128, 128, 0.062);
 }
 
-.form-box button{
+.form-box button {
     background-color: var(--color-main-red);
     border: none;
     transition: background-color 0.25s ease-in-out;
-}  
+}
 
-.form-box button:hover{
+.form-box button:hover {
     background-color: var(--color-main-hover-red);
 }
 
 
-.form-box a{
+.form-box a {
     color: var(--color-text);
     margin-bottom: 14px;
     text-decoration: underline;
@@ -154,6 +154,109 @@
     transition: color 0.25s ease-in-out;
 }
 
-.form-box a:hover{
+.form-box a:hover {
     color: var(--color-main-hover-red);
+}
+
+.para-switch{
+    display: none;
+}
+
+/* ----------- Responsive ----------- */
+
+/* Large Mobile */
+@media (max-width: 767px) {
+
+    .auth-box {
+        width: 85%;
+        height: 70%;
+        will-change: transform, opacity;
+    }
+
+    @keyframes slideOutLeft {
+        0%{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideOutRight {
+        0%{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
+    .auth-box.animate-out{
+        animation: slideOutLeft 0.4s forwards;
+    }
+    .auth-box.animate-in{
+        animation: slideOutRight 0.4s forwards;
+    }
+
+    .form-box {
+        width: 100%;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .auth-box.active .form-box {
+        transform: none !important;
+    }
+
+    .overlay-box {
+        display: none;
+    }
+
+    .form-box button {
+        padding: 10px;
+        font-size: var(--mobile-font-size);
+        margin: 16px 0 10px;
+        width: 35vh;
+    }
+
+    .form-box h2 {
+        font-size: 30px;
+    }
+
+    .links {
+        gap: 20px;
+    }
+
+    .links div i {
+        font-size: var(--normal-font-size);
+        padding: 8px;
+    }
+
+    .form-box p {
+        font-size: var(--mobile-font-size);
+    }
+
+    .inputs-signup input,
+    .inputs-signin input {
+        width: 35vh;
+    }
+
+    .form-box a {
+        margin-bottom: 0px;
+        font-size: var(--mobile-font-size);
+    }
+
+    .para-switch{
+        display: block;
+        font-size: var(--mobile-font-size);
+        color: var(--color-paragraph) !important;
+    }
+
+    .switch-link{
+        margin-left: 6px;
+    }
 }
