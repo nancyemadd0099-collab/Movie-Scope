@@ -1,11 +1,12 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
     const location = useLocation()
     const [menuOpen, setMenuOpen] = useState(false)
+    const ref = useRef()
 
     useEffect(() => {
         const nav = document.querySelector('.navbar-section')
@@ -23,14 +24,28 @@ function Navbar() {
         nav.classList.add('scrolled')
     }, [location.pathname])
 
+    useEffect(() => {
+        const handelclick = (e) => {
+            if (ref.current && !ref.current.contains(e.target)) {
+                setMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("click", handelclick)
+        return () => {
+            document.removeEventListener("click", handelclick)
+        }
+    }, [])
+
     return (
         <>
             <nav className='navbar-section'>
-                <div className='navbar-group'>
+                <div className='navbar-group' ref={ref}>
                     <div className="logo">
                         <p><span className="logo-letter">M</span>ovieScope</p>
                     </div>
-                    <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+                    <div
+                        className={`nav-links ${menuOpen ? 'open' : ''}`}>
                         <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Home</Link>
                         <Link
                             to="/Movies"
@@ -52,8 +67,8 @@ function Navbar() {
                             )}
                         </NavLink>
                     </div>
+
                     <div className="nav-actions">
-                        {/* <p className='search-icon'><i class="fa-solid fa-magnifying-glass"></i></p> */}
                         <NavLink to="/register">
                             {({ isActive }) => (
                                 <button className={isActive ? "active" : ""}>
@@ -67,7 +82,10 @@ function Navbar() {
                     {/* humburger Button */}
                     <div
                         className={`menu-btn ${menuOpen ? 'active' : ''}`}
-                        onClick={() => setMenuOpen(!menuOpen)}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setMenuOpen(prev => !prev)
+                        }}
                     >
                         <span></span>
                         <span></span>
